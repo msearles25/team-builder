@@ -23,7 +23,7 @@ function Form(props) {
 
     return (
         <form onSubmit={submitForm}>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>Name: </label>
             <input
                 id='name'
                 type='text'
@@ -31,7 +31,22 @@ function Form(props) {
                 onChange={changeHandler}
                 value={member.name}
             />
-
+            <label htmlFor='email'>Email: </label>
+            <input 
+                id='email'
+                type='text'
+                name='email'
+                onChange={changeHandler}
+                value={member.email}
+            />
+            <label htmlFor='role'>Role: </label>
+            <select id='role' name='role' onChange={changeHandler} value={member.role}>
+                <option>Select one...</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>Designer</option>
+            </select>
+            <button type='submit'>Add a member</button>
         </form>
     )
 }
