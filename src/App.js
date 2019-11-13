@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import TeamMembers from './components/TeamMembers';
+
 function App() {
-  const [teamMembers, setTeamMembers] = useState ([
+  const [teamMember, setTeamMember] = useState ([
     {
       id: 1,
       name: 'Bob',
@@ -12,7 +14,7 @@ function App() {
   ])
   return (
     <div className="App">
-      <TeamMembers />
+      <TeamMembers teamMember={teamMember}/>
     </div>
   );
 }
